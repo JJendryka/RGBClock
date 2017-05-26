@@ -12888,10 +12888,7 @@ N-Channel Logic Level Enhancement Mode Field Effect Transistor</description>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="22.86" y="43.18"/>
-<instance part="AMS1117" gate="G$1" x="-53.34" y="15.24" smashed="yes">
-<attribute name="NAME" x="-60.96" y="22.86" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-60.96" y="20.32" size="1.778" layer="96"/>
-</instance>
+<instance part="AMS1117" gate="G$1" x="-53.34" y="15.24"/>
 <instance part="R1" gate="G$1" x="-20.32" y="50.8" rot="R90"/>
 <instance part="R2" gate="G$1" x="-35.56" y="50.8" rot="R90"/>
 <instance part="S1" gate="G$1" x="48.26" y="30.48" rot="R270"/>
