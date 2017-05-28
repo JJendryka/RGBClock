@@ -9,6 +9,20 @@
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="yes" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="yes" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="yes" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="yes" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="yes" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="yes" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="yes" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="yes" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="yes" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="yes" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="yes" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="yes" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="yes" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
@@ -12899,6 +12913,95 @@ N-Channel Logic Level Enhancement Mode Field Effect Transistor</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="photo-elements" urn="urn:adsk.eagle:library:323">
+<description>&lt;b&gt;Photocells&lt;/b&gt;&lt;p&gt;
+Manufakturer: PerkinElmer Optoelektronics&lt;br&gt;
+www.perkinelmer.com/opto</description>
+<packages>
+<package name="TO46-VT200" library_version="1">
+<description>&lt;b&gt;Photoconductive Cell&lt;/b&gt; VT200 Series&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt200seriesdatasheet.pdf</description>
+<wire x1="-0.5" y1="2" x2="-0.5" y2="1.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="-0.5" y1="1.5" x2="1" y2="1.5" width="0.1016" layer="21"/>
+<wire x1="1" y1="1.5" x2="1" y2="1" width="0.1016" layer="21" curve="-180"/>
+<wire x1="1" y1="1" x2="-0.5" y2="1" width="0.1016" layer="21"/>
+<wire x1="-0.5" y1="1" x2="-0.5" y2="0.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="-0.5" y1="0.5" x2="0.25" y2="0.5" width="0.1016" layer="21"/>
+<wire x1="0.25" y1="0.5" x2="0.25" y2="0" width="0.1016" layer="21" curve="-180"/>
+<wire x1="0.25" y1="0" x2="-0.25" y2="0" width="0.1016" layer="21"/>
+<wire x1="-0.25" y1="0" x2="-0.25" y2="-0.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="-0.25" y1="-0.5" x2="0.25" y2="-0.5" width="0.1016" layer="21"/>
+<wire x1="0.25" y1="-0.5" x2="0.25" y2="-1" width="0.1016" layer="21" curve="-180"/>
+<wire x1="0.25" y1="-1" x2="-1" y2="-1" width="0.1016" layer="21"/>
+<wire x1="-1" y1="-1" x2="-1" y2="-1.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="-1" y1="-1.5" x2="0.75" y2="-1.5" width="0.1016" layer="21"/>
+<wire x1="0.75" y1="-1.5" x2="0.75" y2="-2" width="0.1016" layer="21" curve="-180"/>
+<wire x1="0.75" y1="-2" x2="-0.5" y2="-2" width="0.1016" layer="21"/>
+<wire x1="-0.5" y1="-2" x2="-0.75" y2="-2.25" width="0.1016" layer="21" curve="90"/>
+<wire x1="-0.5" y1="2" x2="0.5" y2="2" width="0.1016" layer="21"/>
+<wire x1="0.5" y1="2" x2="0.75" y2="2.25" width="0.1016" layer="21" curve="90"/>
+<circle x="0" y="0" radius="2.8" width="0.2032" layer="21"/>
+<circle x="0" y="0" radius="2.35" width="0.2032" layer="21"/>
+<pad name="1" x="-1.27" y="0" drill="0.8" diameter="1.4"/>
+<pad name="2" x="1.27" y="0" drill="0.8" diameter="1.4"/>
+<text x="-2.25" y="-4.25" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.75" y="3" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="PHOTOCELL" library_version="1">
+<wire x1="-3.048" y1="2.413" x2="-1.651" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="-3.175" y1="1.27" x2="-1.778" y2="-0.127" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.016" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="1.016" y1="-1.143" x2="-1.016" y2="-0.381" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="-0.381" x2="1.016" y2="0.381" width="0.254" layer="94"/>
+<wire x1="1.016" y1="0.381" x2="-1.016" y2="1.143" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="1.143" x2="1.016" y2="1.905" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="1.016" y2="1.905" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="-1.905" x2="1.016" y2="-1.143" width="0.254" layer="94"/>
+<text x="2.54" y="0" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="2" x="0" y="-5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+<polygon width="0.1524" layer="94">
+<vertex x="-1.778" y="-0.127"/>
+<vertex x="-2.667" y="0.254"/>
+<vertex x="-2.159" y="0.762"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-1.651" y="1.016"/>
+<vertex x="-2.54" y="1.397"/>
+<vertex x="-2.032" y="1.905"/>
+</polygon>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="VT2*" prefix="PH" library_version="1">
+<description>&lt;b&gt;Photoconductive Cell&lt;/b&gt; VT200 Series&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt200seriesdatasheet.pdf</description>
+<gates>
+<gate name="G$1" symbol="PHOTOCELL" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="TO46-VT200">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="0N1"/>
+<technology name="0N2"/>
+<technology name="0N3"/>
+<technology name="0N4"/>
+<technology name="3N1"/>
+<technology name="3N2"/>
+<technology name="3N3"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -12946,6 +13049,13 @@ N-Channel Logic Level Enhancement Mode Field Effect Transistor</description>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="P+12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805"/>
+<part name="P+13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="PH1" library="photo-elements" library_urn="urn:adsk.eagle:library:323" deviceset="VT2*" device="" technology="0N1"/>
+<part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805"/>
+<part name="P+14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12997,6 +13107,15 @@ N-Channel Logic Level Enhancement Mode Field Effect Transistor</description>
 <instance part="GND8" gate="1" x="-40.64" y="30.48"/>
 <instance part="P+11" gate="1" x="-40.64" y="55.88"/>
 <instance part="P+12" gate="1" x="-73.66" y="55.88"/>
+<instance part="C5" gate="G$1" x="48.26" y="5.08"/>
+<instance part="P+13" gate="VCC" x="48.26" y="12.7" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="55.88" y="10.16" size="1.778" layer="96" rot="MR0"/>
+</instance>
+<instance part="GND9" gate="1" x="48.26" y="-5.08"/>
+<instance part="PH1" gate="G$1" x="-15.24" y="35.56"/>
+<instance part="R4" gate="G$1" x="-15.24" y="55.88" rot="R90"/>
+<instance part="P+14" gate="VCC" x="-15.24" y="66.04"/>
+<instance part="GND10" gate="1" x="-15.24" y="25.4"/>
 </instances>
 <busses>
 </busses>
@@ -13126,6 +13245,16 @@ N-Channel Logic Level Enhancement Mode Field Effect Transistor</description>
 <wire x1="-43.18" y1="35.56" x2="-40.64" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="-40.64" y1="35.56" x2="-40.64" y2="33.02" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="C5" gate="G$1" pin="2"/>
+<pinref part="GND9" gate="1" pin="GND"/>
+<wire x1="48.26" y1="-2.54" x2="48.26" y2="0" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="PH1" gate="G$1" pin="2"/>
+<pinref part="GND10" gate="1" pin="GND"/>
+<wire x1="-15.24" y1="27.94" x2="-15.24" y2="30.48" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$9" class="0">
 <segment>
@@ -13195,6 +13324,16 @@ N-Channel Logic Level Enhancement Mode Field Effect Transistor</description>
 <pinref part="P+5" gate="VCC" pin="VCC"/>
 <wire x1="35.56" y1="5.08" x2="35.56" y2="2.54" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="C5" gate="G$1" pin="1"/>
+<pinref part="P+13" gate="VCC" pin="VCC"/>
+<wire x1="48.26" y1="10.16" x2="48.26" y2="7.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="P+14" gate="VCC" pin="VCC"/>
+<wire x1="-15.24" y1="63.5" x2="-15.24" y2="60.96" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$7" class="0">
 <segment>
@@ -13263,6 +13402,17 @@ N-Channel Logic Level Enhancement Mode Field Effect Transistor</description>
 <pinref part="SV1" gate="G$1" pin="1"/>
 <pinref part="D1" gate="G$1" pin="DIN"/>
 <wire x1="-116.84" y1="43.18" x2="-106.68" y2="43.18" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="ADC" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="ADC"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="0" y1="48.26" x2="-15.24" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="48.26" x2="-15.24" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="PH1" gate="G$1" pin="1"/>
+<wire x1="-15.24" y1="40.64" x2="-15.24" y2="48.26" width="0.1524" layer="91"/>
+<junction x="-15.24" y="48.26"/>
 </segment>
 </net>
 </nets>
