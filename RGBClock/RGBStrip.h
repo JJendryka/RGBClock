@@ -14,7 +14,7 @@ private:
     Adafruit_NeoPixel pixels;
     int maximum;
 public:
-    RGBStrip(int pin);
+    RGBStrip();
     void setPixel(int index, float rgb[3]);
     void setSmoothPixel(int index, float rgb[3]);
     void setSmoothPixel(int index, int r, int g, int b);

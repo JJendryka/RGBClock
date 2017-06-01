@@ -1,8 +1,8 @@
 #include "RGBStrip.h"
 
 
-RGBStrip::RGBStrip(int pin) : pixels(LENGTH, 14, NEO_GRB + NEO_KHZ800){
-    this->pin = pin;
+RGBStrip::RGBStrip() : pixels(LENGTH, 14, NEO_GRB + NEO_KHZ800){
+    this->pin = 14
     pixels.begin();
     smooth_speed=10;//desired brightness will be reached after number of refreshments specified here;
     for(int h=0;h<LENGTH;h++)
@@ -61,23 +61,23 @@ void RGBStrip::upd(){
           smooth_progress[i][0]++;
           strip[i][0] = (target[i][0]-difference[i][0])+smooth_progress[i][0]*difference[i][0]/smooth_speed;
         }
-        
+
         if(smooth_progress[i][1]<smooth_speed)
         {
           smooth_progress[i][1]++;
           strip[i][1] = (target[i][1]-difference[i][1])+smooth_progress[i][1]*difference[i][1]/smooth_speed;
         }
-        
+
         if(smooth_progress[i][2]<smooth_speed)
         {
           smooth_progress[i][2]++;
           strip[i][2] = (target[i][2]-difference[i][2])+smooth_progress[i][2]*difference[i][2]/smooth_speed;
         }
-        
-        
-        
-        
-        
+
+
+
+
+
         pixels.setPixelColor(i, pixels.Color((int)strip[i][0], (int)strip[i][1], (int)strip[i][2]));
     }
     Serial.println(strip[2][2]);
