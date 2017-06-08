@@ -1,8 +1,9 @@
+#pragma once
+
 #include "RGBStrip.h"
 
 
 RGBStrip::RGBStrip() : pixels(LENGTH, 14, NEO_GRB + NEO_KHZ800){
-    this->pin = 14
     pixels.begin();
     smooth_speed=10;//desired brightness will be reached after number of refreshments specified here;
     for(int h=0;h<LENGTH;h++)
@@ -18,7 +19,7 @@ void RGBStrip::setPixel(int index, float rgb[]) {
     strip[index][1] = rgb[1];
     strip[index][2] = rgb[2];
 }
-void RGBStrip::setSmoothPixel(int index, float rgb[]){
+void RGBStrip::setSmoothPixel(int index, int rgb[]){
     difference[index][0] = rgb[0] - strip[index][0];
     difference[index][1] = rgb[1] - strip[index][1];
     difference[index][2] = rgb[2] - strip[index][2];
@@ -47,13 +48,13 @@ void RGBStrip::setStrip(float data[][3]){
         setPixel(i, data[i]);
     }
 }
-void RGBStrip::setSmoothStrip(float data[][3]){
+void RGBStrip::setSmoothStrip(int data[][3]){
     for (int i=0; i < LENGTH; i++){
         setSmoothPixel(i, data[i]);
     }
 }
 void RGBStrip::upd(){
-    for (int i=0; i<30; i++){
+    for (int i=0; i<LENGTH; i++){
         maximum = 1;
         maximum=max(max(1,difference[i][0]),max(difference[i][1],difference[i][2]));
         if(smooth_progress[i][0]<smooth_speed)
@@ -73,13 +74,7 @@ void RGBStrip::upd(){
           smooth_progress[i][2]++;
           strip[i][2] = (target[i][2]-difference[i][2])+smooth_progress[i][2]*difference[i][2]/smooth_speed;
         }
-
-
-
-
-
         pixels.setPixelColor(i, pixels.Color((int)strip[i][0], (int)strip[i][1], (int)strip[i][2]));
     }
-    Serial.println(strip[2][2]);
     pixels.show();
 }

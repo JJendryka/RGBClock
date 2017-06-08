@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Arduino.h"
 #include <Adafruit_NeoPixel.h>
 
@@ -16,9 +18,9 @@ private:
 public:
     RGBStrip();
     void setPixel(int index, float rgb[3]);
-    void setSmoothPixel(int index, float rgb[3]);
+    void setSmoothPixel(int index, int rgb[3]);
     void setSmoothPixel(int index, int r, int g, int b);
     void setStrip(float data[LENGTH][3]);
-    void setSmoothStrip(float data[LENGTH][3]);
+    void setSmoothStrip(int data[LENGTH][3]);
     void upd();
 };
