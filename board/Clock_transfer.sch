@@ -12855,64 +12855,6 @@ N-Channel Logic Level Enhancement Mode Field Effect Transistor</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="WS2812B">
-<packages>
-<package name="LED_WS2812B">
-<wire x1="-2.5" y1="-2.5" x2="2.5" y2="-2.5" width="0.127" layer="51"/>
-<wire x1="2.5" y1="-2.5" x2="2.5" y2="2.5" width="0.127" layer="51"/>
-<wire x1="2.5" y1="2.5" x2="-2.5" y2="2.5" width="0.127" layer="51"/>
-<wire x1="-2.5" y1="2.5" x2="-2.5" y2="-2.5" width="0.127" layer="51"/>
-<text x="-2.5" y="3" size="0.8128" layer="25">&gt;NAME</text>
-<text x="-2.48518125" y="-3.81548125" size="0.8128" layer="27">&gt;VALUE</text>
-<smd name="1" x="-2.45" y="1.6" dx="1" dy="1.5" layer="1" rot="R90"/>
-<smd name="4" x="2.45" y="1.6" dx="1" dy="1.5" layer="1" rot="R90"/>
-<smd name="2" x="-2.45" y="-1.6" dx="1" dy="1.5" layer="1" rot="R90"/>
-<smd name="3" x="2.45" y="-1.6" dx="1" dy="1.5" layer="1" rot="R90"/>
-</package>
-</packages>
-<symbols>
-<symbol name="WS2812B">
-<wire x1="10.16" y1="10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="-10.16" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="10.16" x2="10.16" y2="10.16" width="0.254" layer="94"/>
-<text x="-10.16" y="11.43" size="1.27" layer="95">&gt;NAME</text>
-<text x="-10.16" y="-12.7" size="1.27" layer="96">&gt;VALUE</text>
-<pin name="DIN" x="-15.24" y="0" length="middle" direction="in"/>
-<pin name="DOUT" x="15.24" y="0" length="middle" direction="out" rot="R180"/>
-<pin name="VDD" x="15.24" y="7.62" length="middle" direction="pwr" rot="R180"/>
-<pin name="VSS" x="15.24" y="-7.62" length="middle" direction="pas" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="WS2812B" prefix="D">
-<description>Ws2812b 5050 Rgb Led With Integrated Driver Chip Pack Of 10</description>
-<gates>
-<gate name="G$1" symbol="WS2812B" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="LED_WS2812B">
-<connects>
-<connect gate="G$1" pin="DIN" pad="4"/>
-<connect gate="G$1" pin="DOUT" pad="2"/>
-<connect gate="G$1" pin="VDD" pad="1"/>
-<connect gate="G$1" pin="VSS" pad="3"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="AVAILABILITY" value="Warning"/>
-<attribute name="DESCRIPTION" value="Intelligent Control Led Integrated Light Source Pack Of 10"/>
-<attribute name="MF" value="Adafruit Industries"/>
-<attribute name="MP" value="WS2812B"/>
-<attribute name="PACKAGE" value="None"/>
-<attribute name="PRICE" value="5.56 USD"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="photo-elements" urn="urn:adsk.eagle:library:323">
 <description>&lt;b&gt;Photocells&lt;/b&gt;&lt;p&gt;
 Manufakturer: PerkinElmer Optoelektronics&lt;br&gt;
@@ -13025,7 +12967,7 @@ Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt200serie
 <part name="SV1" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA03-1" device="" value="LED strip"/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-EU" device="TT5D7L" value="100uF"/>
+<part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-EU" device="TT5D11L" value="1000uF"/>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-EU" device="TT5D7L" value="100uF"/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X1" device="" value="GND"/>
@@ -13043,12 +12985,6 @@ Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt200serie
 <part name="P+9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="P+10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="D1" library="WS2812B" deviceset="WS2812B" device=""/>
-<part name="D2" library="WS2812B" deviceset="WS2812B" device=""/>
-<part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="P+11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="P+12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" value="10nF"/>
 <part name="P+13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -13075,8 +13011,8 @@ Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt200serie
 <instance part="GND2" gate="1" x="33.02" y="73.66"/>
 <instance part="R3" gate="G$1" x="-2.54" y="58.42" rot="R90"/>
 <instance part="P+3" gate="VCC" x="-2.54" y="68.58"/>
-<instance part="SV1" gate="G$1" x="182.88" y="43.18" rot="MR0"/>
-<instance part="GND4" gate="1" x="172.72" y="35.56" rot="MR0"/>
+<instance part="SV1" gate="G$1" x="109.22" y="38.1" rot="MR0"/>
+<instance part="GND4" gate="1" x="99.06" y="30.48" rot="MR0"/>
 <instance part="GND5" gate="1" x="-2.54" y="78.74"/>
 <instance part="C1" gate="G$1" x="22.86" y="86.36"/>
 <instance part="C2" gate="G$1" x="45.72" y="86.36" smashed="yes">
@@ -13103,13 +13039,7 @@ Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt200serie
 <instance part="P+8" gate="1" x="93.98" y="58.42" rot="MR0"/>
 <instance part="P+9" gate="1" x="15.24" y="96.52"/>
 <instance part="P+10" gate="VCC" x="50.8" y="96.52"/>
-<instance part="P+2" gate="1" x="172.72" y="50.8" rot="MR0"/>
-<instance part="D1" gate="G$1" x="149.86" y="40.64" rot="MR0"/>
-<instance part="D2" gate="G$1" x="116.84" y="40.64" rot="MR0"/>
-<instance part="GND7" gate="1" x="132.08" y="27.94" rot="MR0"/>
-<instance part="GND8" gate="1" x="99.06" y="27.94" rot="MR0"/>
-<instance part="P+11" gate="1" x="99.06" y="53.34" rot="MR0"/>
-<instance part="P+12" gate="1" x="132.08" y="53.34" rot="MR0"/>
+<instance part="P+2" gate="1" x="99.06" y="45.72" rot="MR0"/>
 <instance part="C5" gate="G$1" x="66.04" y="83.82"/>
 <instance part="P+13" gate="VCC" x="66.04" y="91.44" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="63.5" y="88.9" size="1.778" layer="96" rot="R90"/>
@@ -13129,10 +13059,10 @@ Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt200serie
 <wire x1="30.48" y1="40.64" x2="38.1" y2="40.64" width="0.1524" layer="91"/>
 <label x="40.64" y="40.64" size="1.27" layer="95" xref="yes"/>
 <wire x1="38.1" y1="40.64" x2="40.64" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="40.64" x2="38.1" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="40.64" x2="38.1" y2="30.48" width="0.1524" layer="91"/>
 <junction x="38.1" y="40.64"/>
-<pinref part="S1" gate="G$1" pin="2"/>
-<wire x1="38.1" y1="27.94" x2="43.18" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="S1" gate="G$1" pin="1"/>
+<wire x1="38.1" y1="30.48" x2="43.18" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SV2" gate="1" pin="3"/>
@@ -13203,12 +13133,6 @@ Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt200serie
 <junction x="22.86" y="78.74"/>
 </segment>
 <segment>
-<pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="172.72" y1="43.18" x2="172.72" y2="38.1" width="0.1524" layer="91"/>
-<pinref part="SV1" gate="G$1" pin="2"/>
-<wire x1="175.26" y1="43.18" x2="172.72" y2="43.18" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="GND5" gate="1" pin="GND"/>
 <wire x1="2.54" y1="83.82" x2="-2.54" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="83.82" x2="-2.54" y2="81.28" width="0.1524" layer="91"/>
@@ -13241,18 +13165,6 @@ Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt200serie
 <wire x1="76.2" y1="76.2" x2="76.2" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="D1" gate="G$1" pin="VSS"/>
-<pinref part="GND7" gate="1" pin="GND"/>
-<wire x1="134.62" y1="33.02" x2="132.08" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="33.02" x2="132.08" y2="30.48" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="D2" gate="G$1" pin="VSS"/>
-<pinref part="GND8" gate="1" pin="GND"/>
-<wire x1="101.6" y1="33.02" x2="99.06" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="33.02" x2="99.06" y2="30.48" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="C5" gate="G$1" pin="2"/>
 <pinref part="GND9" gate="1" pin="GND"/>
 <wire x1="66.04" y1="76.2" x2="66.04" y2="78.74" width="0.1524" layer="91"/>
@@ -13261,6 +13173,12 @@ Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt200serie
 <pinref part="PH1" gate="G$1" pin="2"/>
 <pinref part="GND10" gate="1" pin="GND"/>
 <wire x1="127" y1="71.12" x2="127" y2="73.66" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND4" gate="1" pin="GND"/>
+<wire x1="99.06" y1="33.02" x2="99.06" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="SV1" gate="G$1" pin="1"/>
+<wire x1="99.06" y1="35.56" x2="101.6" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -13292,8 +13210,6 @@ Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt200serie
 <wire x1="45.72" y1="91.44" x2="45.72" y2="88.9" width="0.1524" layer="91"/>
 <junction x="45.72" y="91.44"/>
 <wire x1="45.72" y1="91.44" x2="50.8" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="AMS1117" gate="G$1" pin="OUT"/>
-<wire x1="40.64" y1="91.44" x2="43.18" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="P+10" gate="VCC" pin="VCC"/>
 <wire x1="43.18" y1="91.44" x2="45.72" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="93.98" x2="50.8" y2="91.44" width="0.1524" layer="91"/>
@@ -13301,7 +13217,6 @@ Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt200serie
 <pinref part="AMS1117" gate="G$1" pin="OUT1"/>
 <wire x1="40.64" y1="93.98" x2="43.18" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="93.98" x2="43.18" y2="91.44" width="0.1524" layer="91"/>
-<junction x="43.18" y="91.44"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="CH_PD"/>
@@ -13337,8 +13252,8 @@ Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt200serie
 <wire x1="91.44" y1="40.64" x2="93.98" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="93.98" y1="40.64" x2="93.98" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="D2" gate="G$1" pin="DOUT"/>
-<wire x1="101.6" y1="40.64" x2="93.98" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="SV1" gate="G$1" pin="3"/>
+<wire x1="93.98" y1="40.64" x2="101.6" y2="40.64" width="0.1524" layer="91"/>
 <junction x="93.98" y="40.64"/>
 </segment>
 </net>
@@ -13369,35 +13284,9 @@ Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt200serie
 </segment>
 <segment>
 <pinref part="P+2" gate="1" pin="+5V"/>
-<wire x1="172.72" y1="45.72" x2="172.72" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="SV1" gate="G$1" pin="3"/>
-<wire x1="175.26" y1="45.72" x2="172.72" y2="45.72" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="D1" gate="G$1" pin="VDD"/>
-<pinref part="P+12" gate="1" pin="+5V"/>
-<wire x1="134.62" y1="48.26" x2="132.08" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="48.26" x2="132.08" y2="50.8" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="D2" gate="G$1" pin="VDD"/>
-<pinref part="P+11" gate="1" pin="+5V"/>
-<wire x1="101.6" y1="48.26" x2="99.06" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="48.26" x2="99.06" y2="50.8" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="D1" gate="G$1" pin="DOUT"/>
-<pinref part="D2" gate="G$1" pin="DIN"/>
-<wire x1="134.62" y1="40.64" x2="132.08" y2="40.64" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="SV1" gate="G$1" pin="1"/>
-<pinref part="D1" gate="G$1" pin="DIN"/>
-<wire x1="175.26" y1="40.64" x2="165.1" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="43.18" x2="99.06" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="SV1" gate="G$1" pin="2"/>
+<wire x1="99.06" y1="38.1" x2="101.6" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ADC" class="0">
@@ -13416,11 +13305,11 @@ Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt200serie
 <label x="-5.08" y="48.26" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="GPIO16" class="0">
+<net name="GPIO14" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="GPIO16"/>
-<wire x1="0" y1="43.18" x2="-5.08" y2="43.18" width="0.1524" layer="91"/>
-<label x="-5.08" y="43.18" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$1" gate="G$1" pin="GPIO14"/>
+<wire x1="0" y1="40.64" x2="-5.08" y2="40.64" width="0.1524" layer="91"/>
+<label x="-5.08" y="40.64" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="S"/>
